@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack",
-    "start:react":"webpack  serve --config ./webpack.react.js"
+    "start:react": "webpack  serve --config ./webpack.react.js",
+    "start:react-babel": "webpack  serve --config ./webpack.react-with-babel.js"
   },
   "keywords": [],
   "author": "",
@@ -15,9 +16,14 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.2.5",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.3.1",
     "typescript": "^4.7.4",
