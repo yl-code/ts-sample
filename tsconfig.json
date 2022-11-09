@@ -1,8 +1,19 @@
 {
+  // "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["esnext", "dom"],
+    "rootDir": "src",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+
     "jsx": "react",
     "esModuleInterop": true,
+    "downlevelIteration": true,
     "target": "ES5",
     "experimentalDecorators": true
-  }
+  },
+  "include": ["src"]
 }

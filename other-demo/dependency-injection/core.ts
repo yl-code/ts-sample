@@ -20,8 +20,8 @@ export const Controller = (path?: string): ClassDecorator => {
 export const methodDecoratorFactory = (method: RequestMethod) => {
   return (path: string): MethodDecorator => {
     return function (_target, _key, descriptor) {
-      Reflect.defineMetadata(MetadataKey.Method, method, descriptor.value);
-      Reflect.defineMetadata(MetadataKey.Path, path, descriptor.value);
+      Reflect.defineMetadata(MetadataKey.Method, method, descriptor.value!);
+      Reflect.defineMetadata(MetadataKey.Path, path, descriptor.value!);
     };
   };
 };
